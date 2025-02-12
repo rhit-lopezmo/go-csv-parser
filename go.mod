@@ -1,3 +1,3 @@
-module github.com/rhit-lopezmo/go-csv-parser
+module local-libs/csvParser
 
 go 1.23.4

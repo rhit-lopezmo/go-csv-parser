@@ -10,10 +10,21 @@ import (
 // map from a header to a slice of data
 type CSVData map[string][]string
 
+func (csvData CSVData) getEntry(pos int) []string {
+	entry := []string{}
+
+	for _, val := range csvData {
+		entry = append(entry, val[pos])
+	}
+
+	return entry
+}
+
 // takes in a CSV file path + outputs a struct of the headers and the data as strings
 func CSVDataInit(filename string) (CSVData, error) {
 	file, err := os.Open(filename)
 	if err != nil {
+		fmt.Printf("Could not open file: %s\n", filename)
 		return nil, err
 	}
 
