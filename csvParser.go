@@ -25,7 +25,7 @@ func CSVDataInit(filename string) (CSVData, error) {
 	headers := []string{}
 	
 	// track if in headers line
-	bool inHeaders = true;
+	bool inHeaders = true
 
 	for {
 		line, err := reader.ReadString('\n')
