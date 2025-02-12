@@ -40,7 +40,7 @@ func CSVDataInit(filename string) (CSVData, error) {
 		}
 		
 		// trim new line char
-		line = strings.TrimSuffix("\n")
+		line = strings.TrimSuffix(line, "\n")
 
 		// parse headers or parse data
 		if inHeaders {
