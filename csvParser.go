@@ -10,7 +10,7 @@ import (
 // map from a header to a slice of data
 type CSVData map[string][]string
 
-func (csvData CSVData) getEntry(pos int) []string {
+func (csvData CSVData) GetEntry(pos int) []string {
 	entry := []string{}
 
 	for _, val := range csvData {
